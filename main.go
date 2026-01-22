@@ -22,7 +22,7 @@ func main() {
 	http.HandleFunc("/api/v1/categories", handlers.CategoryHandler)
 	http.HandleFunc("/api/v1/categories/", handlers.CategoryByIDHandler)
 
-	port, err := helpers.FindAvaliblePort(3000)
+	port, err := helpers.FindAvaliblePort(8080)
 	if err != nil {
 		fmt.Println("Failed to find avalible port", port)
 		return
